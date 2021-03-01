@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>class containing student details</h1>
+        <button id="submit">see details</button>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("submit").onclick=function(){
+            class Student {
+                constructor(name, rollno,emailid,msub1,msub2,msub3) {
+                    this.name = name;
+                    this.rollno = rollno;
+                    this.emailid = emailid;
+                    this.msub1 = msub1;
+                    this.msub2 = msub2;
+                    this.msub3 = msub3;
+                }
+            }
+            stud1 = new Student("Qhudsiya","18B81A05L8","qhudsiya@gmail.com",88,90,85);
+            document.getElementById("demo").innerHTML = "Name : "+ stud1.name+" Rollno: "+stud1.rollno+" email: "+stud1.emailid+" Marks: "+stud1.msub1+ "  "+stud1.msub2+"  "+stud1.msub3 ; 
+        };
+        </script>
+    </body>
+</html>
