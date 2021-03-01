@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Numbers</title>
+    </head>
+    <body>
+        <h1>Even or Odd Numbers</h1>
+        <input type="text" name="num" id="num">
+        <button id="submit">submit</button>
+        <p id="demo"></p>
+        <script>
+             document.getElementById("submit").onclick = function() {
+            var eoo;
+            var n =document.getElementById("num").value;
+            eoo = () => {
+                if(n%2 == 0)
+                return "Even number";
+                else
+                return "Odd number";
+            }
+            document.getElementById("demo").innerHTML = eoo();
+        };
+        </script>
+    </body>
+</html>
