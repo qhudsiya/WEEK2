@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factorial</title>
+    </head>
+    <body>
+        <h1>Factorial</h1>
+        <input type="text" value="num" id="num">
+        <button id="submit">submit</button>
+        <p id="demo"></p>
+        <script>
+             document.getElementById("submit").onclick = function() {
+            var f=1;
+            var fact;
+            var n =document.getElementById("num").value;
+            fact = () => {
+                while(n!=0){
+                    f=f*n;
+                    n--;
+                }
+                return f;
+            }
+            document.getElementById("demo").innerHTML = fact();
+        };
+        </script>
+    </body>
+</html>
