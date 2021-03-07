@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>Using functional constructor and printing details</h1>
+        <p id="demo"></p>
+        <script>
+           function student(name, rollno,emailid) {
+                    this.name = name;
+                    this.rollno = rollno;
+                    this.emailid = emailid;
+                }
+            var stud1 = new student("Qhudsiya","18B81A05L8","qhudsiya@gmail.com");
+            document.getElementById("demo").innerHTML = "Name : "+ stud1.name+" Rollno: "+stud1.rollno+" email: "+stud1.emailid; 
+        </script>
+    </body>
+</html>
