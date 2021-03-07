@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS classes</title>
+    </head>
+    <body>
+        <h1>Class Inheritance</h1>
+        <button id="check">check</button>
+        <h2>Class 1:Student</h2>
+        <p id="demo"></p><br>
+        <h2>Class 2(extends class 1)</h2>
+        <p id="demo1"></p>
+        <script>
+            document.getElementById("check").onclick=function(){
+            class Student{
+                constructor(name,rollno){
+                    this.name=name;
+                    this.rollno=rollno;
+                }
+                display(){
+                    return "Name: "+this.name+" Rollno: "+this.rollno;
+                }
+            }
+            class details extends Student{
+                constructor(n,roll,phoneno,email){
+                    super(n,roll);
+                    this.phoneno=phoneno;
+                    this.email=email;
+                }
+                displaydetails(){
+                    return this.display() + 'Phone No: '+this.phoneno+" Email Id: "+this.email;
+                }
+            }
+            let stud2=new details("Qhudsiya","18B81A05L8",123456789,"qhudsiya@gmail.com");
+            document.getElementById("demo1").innerHTML = stud2.displaydetails();
+            let stud1=new Student("Qhudsiya","18B81A05L8");
+            document.getElementById("demo").innerHTML = stud1.display();
+        }
+        </script>
+    </body>
+</html>
